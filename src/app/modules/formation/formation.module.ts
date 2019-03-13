@@ -1,19 +1,28 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-<<<<<<< HEAD
-
-=======
  
->>>>>>> c30db418e4231f44541682965c74f4fa957d0d37
+import { FormationRoutingModule } from './formation-routing.module';
+import { CRUDComponent } from './crud/crud.component';
+import { FormItemComponent } from './form-item/form-item.component';
+import { FormListComponent } from './form-list/form-list.component';
+import { HttpClientModule } from '@angular/common/http';
+import {FormsModule} from '@angular/forms'; 
+import { FormationService } from './formation.service';
 
 @NgModule({
-  declarations: [],
+  declarations: [CRUDComponent, FormItemComponent, FormListComponent],
   imports: [
-<<<<<<< HEAD
     CommonModule,
-=======
-    CommonModule 
->>>>>>> c30db418e4231f44541682965c74f4fa957d0d37
-  ]
+    FormsModule,
+    HttpClientModule,
+    FormationRoutingModule
+  ],
+  providers: [
+    FormationService
+  ],
+  exports: [
+    FormListComponent,
+    CRUDComponent
+  ] 
 })
 export class FormationModule { }
